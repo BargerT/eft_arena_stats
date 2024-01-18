@@ -1,0 +1,52 @@
+<Marksman id="Marksman">
+    <kit id="Owl">
+        <kit id="Cowboy">
+            <kit id="Echo">
+                <kit id="Shade">
+                    <kit id="Ruby">
+                        <kit id="Overlord">
+                            <kit id="Lich">
+
+                            </kit>
+                        </kit>
+                        <kit id="Hector">
+                            <kit id="Prefect">
+
+                            </kit>
+                        </kit>
+                    </kit>
+                </kit>
+                <kit id="Mosquito">
+                    <kit id="Olympus">
+                        <kit id="Wiper">
+
+                        </kit>
+                    </kit>
+                </kit>
+            </kit>
+            <kit id="Foreman">
+
+            </kit>
+        </kit>
+        <kit id="Nail">
+            <kit id="Blacksmith">
+                <kit id="Striker">
+                    <kit id="Surf">
+                        <kit id="Calm">
+
+                        </kit>
+                    </kit>
+                </kit>
+            </kit>
+        </kit>
+    </kit>
+    <kit id="Chepushilo">
+        <kit id="Climber">
+            <kit id="Click">
+                <kit id="Gaze">
+                    
+                </kit>
+            </kit>
+        </kit>
+    </kit>
+</Marksman>

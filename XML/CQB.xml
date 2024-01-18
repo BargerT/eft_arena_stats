@@ -1,0 +1,55 @@
+<CQB id="CQB">
+    <kit id="Attic">
+        <kit id="Raider">
+            <kit id="Blackjack">
+                <kit id="Centurion">
+                    <kit id="Zenith">
+                        <kit id="Guardian">
+                            <kit id="Ratatouille">
+
+                            </kit>
+                        </kit>
+                        <kit id="Butcher">
+
+                        </kit>
+                    </kit>
+                    <kit id="Split">
+                        <kit id="DEVGRU">
+
+                        </kit>
+                    </kit>
+                </kit>
+                <kit id="Lima">
+
+                </kit>
+            </kit>
+        </kit>
+        <kit id = "Papasha">
+            <kit id="Tacticool">
+                <kit id="Bromine">
+                    <kit id="Cavalier">
+                        <kit id="Nightmare">
+                            <kit id="Haymaker">
+
+                            </kit>
+                        </kit>
+                    </kit>
+                    <kit id="Calamary">
+                        <kit id="Boar">
+
+                        </kit>
+                    </kit>
+                </kit>
+            </kit>
+        </kit>
+    </kit>
+    <kit id="Murka">
+        <kit id="Section 8">
+            <kit id="Mortician">
+                <kit id="Mantis">
+                    
+                </kit>
+            </kit>
+        </kit>
+    </kit>
+</CQB>

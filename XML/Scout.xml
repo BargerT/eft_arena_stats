@@ -1,0 +1,57 @@
+<Scout id="Scout">
+    <kit id="Handler">
+        <kit id="Runner">
+            <kit id="Nomad">
+                <kit id="Blitz">
+
+                </kit>
+            </kit>
+            <kit id="Agent">
+                <kit id="Sandman">
+                    <kit id="Grumpy">
+
+                    </kit>
+                    <kit id="Ajax">
+                        <kit id="Flanker">
+
+                        </kit>
+                        <kit id="Reaper">
+
+                        </kit>
+                    </kit>
+                </kit>
+            </kit>
+        </kit>
+    </kit>
+    <kit id="Plantain">
+        <kit id="Vityaz">
+            <kit id="Sawbones">
+                <kit id="Saboteur">
+                    <kit id="Weaver">
+                        <kit id="Cobra">
+                            <kit id="Chimera">
+
+                            </kit>
+                        </kit>
+                        <kit id="Vampire">
+                            <kit id="Samael">
+
+                            </kit>
+                        </kit>
+                    </kit>
+                </kit>
+                <kit id="Triton">
+                    <kit id="Vimpel">
+                        <kit id="Chopper">
+                            
+                        </kit>
+                    </kit>
+                </kit>
+            </kit>
+            <kit id="Whistle">
+
+            </kit>
+        </kit>
+
+    </kit>
+</Scout>
