@@ -302,8 +302,7 @@
                         <face>0</face>
                         <chest>5</chest>
                     </armor>
-                    <cost></cost>
-                    <cost>121000</cost>
+                    <cost>160000</cost>
                     <kit id="Gaze">
                         <exp>408000</exp>
                         <ammo>

@@ -164,7 +164,7 @@
                 <face>0</face>
                 <chest>3</chest>
             </armor>
-            <cost></cost>
+            <cost>63000</cost>
             <kit id="Sawbones">
                 <exp>53000</exp>
                 <ammo>
