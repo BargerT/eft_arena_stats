@@ -2,6 +2,7 @@ from trees import Tree
 
 def main():
     assault = Tree("Assault")
+    cqb = Tree("CQB")
     print("Searching Tree for Sector")
     sector_search = assault.find_kit("Sector")
     if sector_search != None:
