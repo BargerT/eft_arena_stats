@@ -1,39 +1,250 @@
 <Marksman id="Marksman">
     <kit id="Owl">
+        <exp>0</exp>
+        <ammo>
+            <damage>87</damage>
+            <penetration>30</penetration>
+            <rpm>600</rpm>
+        </ammo>
+        <armor>
+            <helmet>0</helmet>
+            <face>0</face>
+            <chest>2</chest>
+        </armor>
+        <cost>56000</cost>
         <kit id="Cowboy">
+            <exp>24000</exp>
+            <ammo>
+                <damage>87</damage>
+                <penetration>30</penetration>
+                <rpm>700</rpm>
+            </ammo>
+            <armor>
+                <helmet>0</helmet>
+                <face>0</face>
+                <chest>0</chest>
+            </armor>
+            <cost>67500</cost>
             <kit id="Echo">
+                <exp>54000</exp>
+                <ammo>
+                    <damage>83</damage>
+                    <penetration>35</penetration>
+                    <rpm>700</rpm>
+                </ammo>
+                <armor>
+                    <helmet>0</helmet>
+                    <face>0</face>
+                    <chest>3</chest>
+                </armor>
+                <cost>90000</cost>
                 <kit id="Shade">
+                    <exp>186000</exp>
+                    <ammo>
+                        <damage>80</damage>
+                        <penetration>41</penetration>
+                        <rpm>700</rpm>
+                    </ammo>
+                    <armor>
+                        <helmet>0</helmet>
+                        <face>0</face>
+                        <chest>2</chest>
+                    </armor>
+                    <cost>140300</cost>
                     <kit id="Ruby">
+                        <exp>303000</exp>
+                        <ammo>
+                            <damage>80</damage>
+                            <penetration>41</penetration>
+                            <rpm>700</rpm>
+                        </ammo>
+                        <armor>
+                            <helmet>0</helmet>
+                            <face>0</face>
+                            <chest>4</chest>
+                        </armor>
+                        <cost>171200</cost>
                         <kit id="Overlord">
+                            <exp>391000</exp>
+                            <ammo>
+                                <damage>67</damage>
+                                <penetration>70</penetration>
+                                <rpm>700</rpm>
+                            </ammo>
+                            <armor>
+                                <helmet>0</helmet>
+                                <face>0</face>
+                                <chest>4</chest>
+                            </armor>
+                            <cost>220000</cost>
                             <kit id="Lich">
-
+                                <exp>400000</exp>
+                                <ammo>
+                                    <damage>122</damage>
+                                    <penetration>47</penetration>
+                                    <rpm>30</rpm>
+                                </ammo>
+                                <armor>
+                                    <helmet>0</helmet>
+                                    <face>0</face>
+                                    <chest>0</chest>
+                                </armor>
+                                <cost>224000</cost>
                             </kit>
                         </kit>
                         <kit id="Hector">
+                            <exp>396000</exp>
+                            <ammo>
+                                <damage>38</damage>
+                                <penetration>57</penetration>
+                                <rpm>800</rpm>
+                            </ammo>
+                            <armor>
+                                <helmet>0</helmet>
+                                <face>0</face>
+                                <chest>5</chest>
+                            </armor>
+                            <cost>221000</cost>
                             <kit id="Prefect">
-
+                                <exp>400000</exp>
+                                <ammo>
+                                    <damage>47</damage>
+                                    <penetration>58</penetration>
+                                    <rpm>600</rpm>
+                                </ammo>
+                                <armor>
+                                    <helmet>0</helmet>
+                                    <face>0</face>
+                                    <chest>5</chest>
+                                </armor>
+                                <cost>232000</cost>
                             </kit>
                         </kit>
                     </kit>
                 </kit>
                 <kit id="Mosquito">
+                    <exp>180000</exp>
+                    <ammo>
+                        <damage>49</damage>
+                        <penetration>44</penetration>
+                        <rpm>715</rpm>
+                    </ammo>
+                    <armor>
+                        <helmet>0</helmet>
+                        <face>0</face>
+                        <chest>4</chest>
+                    </armor>
+                    <cost>129100</cost>
                     <kit id="Olympus">
+                        <exp>286000</exp>
+                        <ammo>
+                            <damage>52</damage>
+                            <penetration>39</penetration>
+                            <rpm>800</rpm>
+                        </ammo>
+                        <armor>
+                            <helmet>0</helmet>
+                            <face>0</face>
+                            <chest>5</chest>
+                        </armor>
+                        <cost>168000</cost>
                         <kit id="Wiper">
-
+                            <exp>294000</exp>
+                            <ammo>
+                                <damage>40</damage>
+                                <penetration>52</penetration>
+                                <rpm>650</rpm>
+                            </ammo>
+                            <armor>
+                                <helmet>0</helmet>
+                                <face>0</face>
+                                <chest>4</chest>
+                            </armor>
+                            <cost>169300</cost>
                         </kit>
                     </kit>
                 </kit>
             </kit>
             <kit id="Foreman">
-
+                <exp>49000</exp>
+                <ammo>
+                    <damage>55</damage>
+                    <penetration>41</penetration>
+                    <rpm>40</rpm>
+                </ammo>
+                <armor>
+                    <helmet>0</helmet>
+                    <face>0</face>
+                    <chest>3</chest>
+                </armor>
+                <cost>92300</cost>
             </kit>
         </kit>
         <kit id="Nail">
+            <exp>22000</exp>
+            <ammo>
+                <damage>73</damage>
+                <penetration>30</penetration>
+                <rpm>600</rpm>
+            </ammo>
+            <armor>
+                <helmet>0</helmet>
+                <face>0</face>
+                <chest>3</chest>
+            </armor>
+            <cost>67700</cost>
             <kit id="Blacksmith">
+                <exp>153100</exp>
+                <ammo>
+                    <damage>79</damage>
+                    <penetration>44</penetration>
+                    <rpm>600</rpm>
+                </ammo>
+                <armor>
+                    <helmet>0</helmet>
+                    <face>0</face>
+                    <chest>4</chest>
+                </armor>
+                <cost>127000</cost>
                 <kit id="Striker">
+                    <exp>293000</exp>
+                    <ammo>
+                        <damage>102</damage>
+                        <penetration>46</penetration>
+                        <rpm>650</rpm>
+                    </ammo>
+                    <armor>
+                        <helmet>0</helmet>
+                        <face>0</face>
+                        <chest>4</chest>
+                    </armor>
+                    <cost>163000</cost>
                     <kit id="Surf">
+                        <exp>301000</exp>
+                        <ammo>
+                            <damage>58</damage>
+                            <penetration>46</penetration>
+                            <rpm>900</rpm>
+                        </ammo>
+                        <armor>
+                            <helmet>0</helmet>
+                            <face>0</face>
+                            <chest>4</chest>
+                        </armor>
+                        <cost>170000</cost>
                         <kit id="Calm">
-
+                            <exp>387000</exp>
+                            <ammo>
+                                <damage>72</damage>
+                                <penetration>70</penetration>
+                                <rpm>700</rpm>
+                            </ammo>
+                            <armor>
+                                <helmet>0</helmet>
+                                <face>0</face>
+                                <chest>5</chest>
+                            </armor>
+                            <cost>214000</cost>
                         </kit>
                     </kit>
                 </kit>
@@ -41,10 +252,72 @@
         </kit>
     </kit>
     <kit id="Chepushilo">
-        <kit id="Climber">
-            <kit id="Click">
-                <kit id="Gaze">
-                    
+        <exp>0</exp>
+        <ammo>
+            <damage>92</damage>
+            <penetration>27</penetration>
+            <rpm>30</rpm>
+        </ammo>
+        <armor>
+            <helmet>0</helmet>
+            <face>0</face>
+            <chest>2</chest>
+        </armor>
+        <cost>51900</cost>
+        <kit id="Cracksman">
+            <exp>52100</exp>
+            <ammo>
+                <damage>84</damage>
+                <penetration>45</penetration>
+                <rpm>30</rpm>
+            </ammo>
+            <armor>
+                <helmet>0</helmet>
+                <face>0</face>
+                <chest>3</chest>
+            </armor>
+            <cost>87000</cost>
+            <kit id="Climber">
+                <exp>98000</exp>
+                <ammo>
+                    <damage>79</damage>
+                    <penetration>44</penetration>
+                    <rpm>30</rpm>
+                </ammo>
+                <armor>
+                    <helmet>0</helmet>
+                    <face>0</face>
+                    <chest>4</chest>
+                </armor>
+                <cost>121000</cost>
+                <kit id="Click">
+                    <exp>283000</exp>
+                    <ammo>
+                        <damage>75</damage>
+                        <penetration>62</penetration>
+                        <rpm>30</rpm>
+                    </ammo>
+                    <armor>
+                        <helmet>0</helmet>
+                        <face>0</face>
+                        <chest>5</chest>
+                    </armor>
+                    <cost></cost>
+                    <cost>121000</cost>
+                    <kit id="Gaze">
+                        <exp>408000</exp>
+                        <ammo>
+                            <damage>115</damage>
+                            <penetration>79</penetration>
+                            <rpm>30</rpm>
+                        </ammo>
+                        <armor>
+                            <helmet>0</helmet>
+                            <face>0</face>
+                            <chest>4</chest>
+                        </armor>
+                        <cost>228000</cost>
+                    </kit>
                 </kit>
             </kit>
         </kit>
