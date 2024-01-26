@@ -93,7 +93,7 @@ class Tree:
             return second_search
         
         # if the kit matches than record the path back to the top and return it
-        if kit.name.lower() == name.lower():
+        elif kit.name.lower() == name.lower():
             cur_kit = kit
             path_to_kit = []
             while cur_kit._parent != None:
@@ -126,34 +126,6 @@ class Tree:
         
         return total_exp
     
-    def calculate_efficiency(self, kit):
-        rps = kit.ammo[2] / 60
-        # This attempts to normalzie damage against tier 5 armor
-        # Tarkov damage technically takes durability away from armor with each shot
-        # Any ammo with penetration > armor level has ~90% chance to penetrate
-        # Also as armor durability declines armor level declines as well
-        # This is why this formula is extremely simple compared to the true calculations
-        if kit.ammo[1] > 50:
-            normalized_penetration = 1.00
-        else:
-            normalized_penetration = (kit.ammo[1] * 2) / 100 
-        ammo_damage = kit.ammo[0]
-
-        dps = (ammo_damage * normalized_penetration) * rps
-
-        # High tier armor is extremely valuable and adding 4 or 5 points is negligable
-        # This is why it is being multiplied up 20 times
-        armor_value = (kit.armor[0] * 20) + (kit.armor[1] * 20) + (kit.armor[2] * 20)
-        
-        # The first kits are free and require 0 experience
-        # if one is trying to be calculated it should be penalized heavily
-        # As the first kits will never be the most efficient
-        avg_case = self.average_case_unlock_time(kit)
-        if avg_case == 0:
-            return (dps + armor_value) / 60
-        else:
-            return (dps + armor_value) / self.average_case_unlock_time(kit)
-    
     # This function takes a kit and calculates the longest time to unlock
     # It is based on experience gained for losing a match with 0 eliminations and the exp required
     def worst_case_unlock_time(self, kit):
@@ -170,3 +142,87 @@ class Tree:
     # Take the best and the worst case and average it to find the average case unlock time
     def average_case_unlock_time(self, kit):
         return math.ceil((self.worst_case_unlock_time(kit) + self.best_case_unlock_time(kit)) / 2)
+    
+    # This function takes a kit and finds the efficiency of it by comparing its DPS and Armor to EXP required
+    def calculate_efficiency(self, kit):
+        rps = kit.ammo[2] / 60
+        # This attempts to normalzie damage against tier 5 armor
+        # Tarkov damage technically takes durability away from armor with each shot
+        # Any ammo with penetration > armor level has ~90% chance to penetrate
+        # Also as armor durability declines armor level declines as well
+        # This is why this formula is extremely simple compared to the true calculations
+        if kit.ammo[1] > 50:
+            normalized_penetration = 1.00
+        else:
+            normalized_penetration = (kit.ammo[1] * 2) / 100 
+        ammo_damage = kit.ammo[0]
+
+        dps = (ammo_damage * normalized_penetration) * rps
+
+        # High tier armor is extremely valuable and adding 4 or 5 points is negligable to the total so increase the benefit
+        armor_value = (kit.armor[0] * 10000) + (kit.armor[1] * 10000) + (kit.armor[2] * 10000)
+        
+        # The first kits are free and require 0 experience
+        # if one is trying to be calculated it should be penalized heavily
+        # As the first kits will never be the most efficient
+        avg_case = self.average_case_unlock_time(kit)
+        if avg_case == 0:
+            return round((dps + armor_value) / 60, 2)
+        elif avg_case <= 50:
+            return round((dps + armor_value) / 40, 2)
+        else:
+            return round((dps + armor_value) / avg_case, 2)
+    
+    def find_most_efficient(self, kit=None, cur_max=None):
+        # Lets search both sides of the tree and return the most efficient
+        if kit == None:
+            left_branch = self.find_most_efficient(self.root[0], self.root[0])
+            right_branch = self.find_most_efficient(self.root[1], self.root[1])
+            if left_branch != None:
+                if right_branch != None:
+                    if self.calculate_efficiency(left_branch) > self.calculate_efficiency(right_branch):
+                        return left_branch
+                    else:
+                        return right_branch
+                return left_branch
+            return right_branch
+        
+        # if the current max efficiency kit is still empty keep searching
+        if cur_max == None:
+            # else if the current kit has two children search both subtrees and return the solution
+            if len(kit._children) == 2:
+                first_search = self.find_most_efficient(kit._children[0], kit)
+                second_search = self.find_most_efficient(kit._children[1], kit)
+                if first_search != None:
+                    if second_search != None:
+                        if self.calculate_efficiency(first_search) > self.calculate_efficiency(second_search):
+                            return first_search
+                        else:
+                            return second_search
+                    return first_search
+                return second_search 
+            # otherwise the kit only has one child. Search the subtree and return the result
+            else:
+                return self.find_most_efficient(kit._children[0], kit)
+        else:
+            # If our current kit is more efficient it becomes our new cur max
+            if self.calculate_efficiency(kit) > self.calculate_efficiency(cur_max):
+                cur_max = kit
+            # If we are at the bottom of this branch return the max
+            if not kit._children: 
+                return cur_max
+            # else if the current kit has two children search both subtrees for a more efficient kit
+            elif len(kit._children) == 2:
+                first_search = self.find_most_efficient(kit._children[0], cur_max)
+                second_search = self.find_most_efficient(kit._children[1], cur_max)
+                if first_search != None:
+                    if second_search != None:
+                        if self.calculate_efficiency(first_search) > self.calculate_efficiency(second_search):
+                            return first_search
+                        else:
+                            return second_search
+                    return first_search
+                return second_search 
+            # otherwise the kit only has one child. Search the subtree and return the result
+            else:
+                return self.find_most_efficient(kit._children[0], cur_max)
