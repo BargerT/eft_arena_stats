@@ -173,6 +173,7 @@ class Tree:
         else:
             return round((dps + armor_value) / avg_case, 2)
     
+    # Takes nothing as input and returns the most efficient kit in this tree
     def find_most_efficient(self, kit=None, cur_max=None):
         # Lets search both sides of the tree and return the most efficient
         if kit == None:
